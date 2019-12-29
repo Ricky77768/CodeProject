@@ -17,9 +17,11 @@ public class int_array_combinations {
             }
             System.out.println();
         }
+
     }
 
     public static void findCombinations(List<List<Integer>> solutions, ArrayList<Integer> current, int[] nums, int target, int index) {
+
         if (target == 0) {
             solutions.add(new ArrayList(current));
         }

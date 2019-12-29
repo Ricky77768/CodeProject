@@ -2,7 +2,7 @@ package Questions_Other;
 
 // Question: https://leetcode.com/problems/decode-string/
 
-public class decode_string {
+public class decodeString {
     public static void main(String[] args) {
         String input = "4[x3[yy]d]";
 
