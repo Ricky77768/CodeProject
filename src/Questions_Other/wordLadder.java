@@ -53,13 +53,13 @@ public class wordLadder {
         }
 
         // Printing out graph to check if it's correct
-        /* for (Node x : graph) {
+        for (Node x : graph) {
             System.out.print("Word: " + x.value + " || Connected: ");
             for (Node y : x.adj) {
                 System.out.print(y.value + " ");
             }
             System.out.println();
-        } */
+        }
 
         // Running BFS to determine shortest path with each entry point from start word
         ArrayList<Integer> result = new ArrayList<>();
@@ -96,11 +96,10 @@ public class wordLadder {
     public static void search(Node current, ArrayList<String> visited, ArrayList<Integer> result, String target, int count) {
 
         // Printing out path to check
-        /* for (String x : visited) {
+        for (String x : visited) {
             System.out.print(x + " ");
         }
-        System.out.print(">> ");
-        System.out.println(current.value + " << " + count); */
+        System.out.println("*" + current.value + "* " + count);
 
         if (!current.value.equals(target)) {
             visited.add(current.value);
@@ -110,7 +109,7 @@ public class wordLadder {
                 }
             }
         } else {
-            // System.out.println("^^^ SUCCESS");
+            System.out.println("^^^ Valid Path");
             result.add(count);
         }
     }
